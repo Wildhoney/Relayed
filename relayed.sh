@@ -2,7 +2,7 @@
 # Relayed
 
 function begin {
-    node ./Relayed.js $1 $2
+    node ./relayed.js $1 $2
 }
 
 HOST=$1
