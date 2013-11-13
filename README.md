@@ -1,7 +1,11 @@
 Relayed
 =======
 
+<img src="https://travis-ci.org/Wildhoney/Relayed.png?branch=master" />
+
 Convenient Shell/Node script for circumventing CORS issues when developing on localhost.
+
+Via npm: `npm install relayed`
 
 Functionality
 -------

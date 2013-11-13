@@ -1,5 +1,5 @@
 {
-  "name": "Relayed",
+  "name": "relayed",
   "version": "0.1.0",
   "description": "Convenient Shell/Node script for circumventing CORS issues when developing on localhost.",
   "main": "Relayed.js",
