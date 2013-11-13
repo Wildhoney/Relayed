@@ -1,0 +1,23 @@
+{
+  "name": "Relayed",
+  "version": "0.1.0",
+  "description": "Convenient Shell/Node script for circumventing CORS issues when developing on localhost.",
+  "main": "Relayed.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wildhoney/Relayed.git"
+  },
+  "keywords": [
+    "CORS",
+    "AJAX",
+    "WebSockets"
+  ],
+  "author": "Adam Timberlake <adam.timberlake@gmail.com>",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/Wildhoney/Relayed/issues"
+  }
+}
