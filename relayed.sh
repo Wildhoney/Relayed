@@ -9,8 +9,8 @@ function help {
     echo ""
     echo "Relayed - Convenient Shell/Node script for circumventing CORS issues when developing on localhost."
     echo ""
-    echo "    relayed yahoo.com          - begin relaying to http://www.yahoo.com:80/"
-    echo "    relayed yahoo.com 8080     - begin relaying to http://www.yahoo.com:8080/"
+    echo "    relayed http://www.yahoo.com/          - begin relaying to http://www.yahoo.com:80/"
+    echo "    relayed http://www.yahoo.com/ 8080     - begin relaying to http://www.yahoo.com:8080/"
     echo ""
 }
 
