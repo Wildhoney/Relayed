@@ -19,8 +19,6 @@ http.createServer(function (request, response) {
     var headers     = request.headers;
     headers.host    = parsedUrl.host;
 
-    console.log(request.url);
-
     var relayedRequest = transport.request({
 
         host:       headers.host,
