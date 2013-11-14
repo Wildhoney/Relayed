@@ -1,3 +1,6 @@
+var http    = require('http'),
+    url     = require('url');
+
 http.createServer(function (request, response) {
 
     // Passed in variables from the Shell script.
