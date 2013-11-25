@@ -42,7 +42,7 @@ fi
 echo ""
 echo -e "${Bla}${On_Cya} Relayed ${RCol} - Convenient Shell/Node script for circumventing CORS issues when developing on localhost."
 echo ""
-echo -e "${Bla}${On_Gre} Listening to \"${HOST}\:${PORT}" on port 8910... ${RCol}"
+echo -e "${Bla}${On_Gre} Listening to \"${HOST}:${PORT}\" on port 8910... ${RCol}"
 echo ""
 
 begin $HOST $PORT
