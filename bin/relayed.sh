@@ -14,7 +14,7 @@ Cya='\x1b[0;36m';     BCya='\x1b[1;36m';    UCya='\x1b[4;36m';    ICya='\x1b[0;9
 Whi='\x1b[0;37m';     BWhi='\x1b[1;37m';    UWhi='\x1b[4;37m';    IWhi='\x1b[0;97m';    BIWhi='\x1b[1;97m';   On_Whi='\x1b[47m';    On_IWhi='\x1b[0;107m';
 
 function begin {
-    node relayed-node $1 $2
+    relayed-node $1 $2
 }
 
 function help {
