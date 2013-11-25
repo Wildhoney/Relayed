@@ -1,6 +1,6 @@
 {
   "name": "relayed",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Convenient Shell/Node script for circumventing CORS issues when developing on localhost.",
   "main": "Relayed.js",
   "scripts": {
@@ -11,7 +11,8 @@
     "url": "https://github.com/Wildhoney/Relayed.git"
   },
   "bin": {
-    "relayed": "./bin/relayed.sh"
+    "relayed": "./bin/relayed.sh",
+    "relayed-node": "./bin/relayed.js"
   },
   "keywords": [
     "CORS",
