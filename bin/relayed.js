@@ -5,6 +5,12 @@ var http    = require('http'),
 
 http.createServer(function (request, response) {
 
+    // Set all of the necessary headers for CORS support.
+    request.setHeader('Access-Control-Allow-Origin', '*');
+    request.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    request.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    request.setHeader('Access-Control-Allow-Credentials', true);
+
     // Passed in variables from the Shell script.
     var targetUrl   = process.argv[2],
         targetPort  = process.argv[3],
