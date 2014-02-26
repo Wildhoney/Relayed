@@ -1,7 +1,9 @@
 Relayed
 =======
 
-<img src="https://badge.fury.io/js/relayed.png" />
+<img src="https://travis-ci.org/Wildhoney/Relayed.js.png?branch=master" alt="Travis CI" />
+&nbsp;
+<img src="https://badge.fury.io/js/relayed.png" alt="NPM Version" />
 
 Convenient Shell/Node script for circumventing CORS issues when developing on localhost.
 
