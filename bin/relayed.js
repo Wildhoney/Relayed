@@ -3,8 +3,9 @@
 
     "use strict";
 
-    var http    = require('http'),
-        url     = require('url');
+    var http         = require('http'),
+        url          = require('url'),
+        childProcess = require('child_process');
 
     http.createServer(function (request, response) {
 
@@ -67,5 +68,8 @@
         });
 
     }).listen($port, $host);
+
+    // Open the browser to point to the relayed URL.
+    childProcess.spawn('open', ['http://' + $host + ':' + $port]);
 
 })('127.0.0.1', 8910);
