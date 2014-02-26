@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 (function Relayed($host, $port) {
 
+    "use strict";
+
     var http    = require('http'),
         url     = require('url');
 

@@ -23,5 +23,9 @@
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/Wildhoney/Relayed/issues"
+  },
+  "dependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.8.0"
   }
 }
