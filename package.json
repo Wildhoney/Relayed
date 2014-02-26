@@ -1,6 +1,6 @@
 {
   "name": "relayed",
-  "version": "0.1.13",
+  "version": "0.2.0",
   "description": "Convenient Shell/Node script for circumventing CORS issues when developing on localhost.",
   "main": "Relayed.js",
   "scripts": {
