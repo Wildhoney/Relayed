@@ -1,7 +1,7 @@
 Relayed
 =======
 
-<img src="https://travis-ci.org/Wildhoney/Relayed.js.png?branch=master" alt="Travis CI" />
+<img src="https://travis-ci.org/Wildhoney/Relayed.png?branch=master" alt="Travis CI" />
 &nbsp;
 <img src="https://badge.fury.io/js/relayed.png" alt="NPM Version" />
 
