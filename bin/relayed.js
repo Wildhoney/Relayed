@@ -22,7 +22,7 @@
 
         // Initialise the server to listen for incoming requests.
         http.createServer(this._initialiseServer.bind(this)).listen($port, $host);
-        
+
         if (args.o) {
 
             // Open the browser to point to the relayed URL.
