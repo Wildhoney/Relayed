@@ -30,3 +30,11 @@ relayed -h npm.org -p 80
 ```
 
 Open `localhost:8910` in your browser and npm.org will be returned. **Please** remember that Relayed is only for development.
+
+Options
+-------
+
+ `-h <host>` &ndash; Hostname to relay to (required);
+ `-p <port>` &ndash; Port number of the host (defaults to 80);
+ `-s` &ndash; Use HTTPS for the transport protocol;
+ `-o` &ndash; Open `localhost:8910` in your browser;
