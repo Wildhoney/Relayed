@@ -12,13 +12,18 @@
     var http         = require('http'),
         url          = require('url'),
         childProcess = require('child_process'),
-        args         = require('minimist')(process.argv.slice(2));
+        args         = require('minimist')(process.argv.slice(2)),
+        colors       = require('colors');
 
     /**
      * @property Relayed
      * @constructor
      */
     var Relayed = function Relayed() {
+
+        // We're listening!
+        var listening = ' Listening on ' + $host + ' port ' + $port + ' ';
+        console.log(listening.yellow.inverse);
 
         // Initialise the server to listen for incoming requests.
         http.createServer(this._initialiseServer.bind(this)).listen($port, $host);
@@ -75,6 +80,9 @@
             }, function(data) {
 
                 response.writeHead(data.statusCode, data.headers);
+
+                var listening = ' ' + data.statusCode + ' - ' + request.url + ' ';
+                console.log(listening.green.inverse);
 
                 // When we receive data from the relayed request.
                 data.on('data', function onData(datum) {
