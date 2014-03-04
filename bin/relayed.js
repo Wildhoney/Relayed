@@ -81,8 +81,9 @@
 
                 response.writeHead(data.statusCode, data.headers);
 
-                var listening = ' ' + data.statusCode + ' - ' + request.url + ' ';
-                console.log(listening.green.inverse);
+                // We've got an incoming request!
+                var incomingRequest = ' ' + data.statusCode + ' - ' + request.url + ' ';
+                console.log(incomingRequest.green.inverse);
 
                 // When we receive data from the relayed request.
                 data.on('data', function onData(datum) {
