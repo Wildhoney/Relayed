@@ -26,7 +26,7 @@ Getting Started
 The recommended method is running it via the Shell script.
 
 ```
-relayed http://npm.org 80
+relayed -h npm.org -p 80
 ```
 
 Open `localhost:8910` in your browser and npm.org will be returned. **Please** remember that Relayed is only for development.

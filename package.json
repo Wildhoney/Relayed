@@ -1,7 +1,7 @@
 {
   "name": "relayed",
-  "version": "0.2.3",
-  "description": "Convenient Shell/Node script for circumventing CORS issues when developing on localhost.",
+  "version": "0.3.0",
+  "description": "Convenient Node.js app for circumventing CORS issues when developing on localhost.",
   "main": "Relayed.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "grunt": "~0.4.2",
-    "grunt-contrib-jshint": "~0.8.0"
+    "grunt-contrib-jshint": "~0.8.0",
+    "minimist": "0.0.8"
   }
 }
