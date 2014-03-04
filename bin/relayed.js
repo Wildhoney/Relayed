@@ -7,7 +7,7 @@
         url          = require('url'),
         childProcess = require('child_process');
 
-    http.createServer(function (request, response) {
+    http.createServer(function createServer(request, response) {
 
         // Set all of the necessary headers for CORS support.
         response.setHeader('Access-Control-Allow-Origin', '*');
@@ -49,8 +49,8 @@
 
             response.writeHead(relayedResponse.statusCode, relayedResponse.headers);
 
-            relayedResponse.on('data', function onData(response) {
-                response.write(response);
+            relayedResponse.on('data', function onData(data) {
+                response.write(data);
             });
 
             relayedResponse.on('end', function onEnd() {
@@ -60,7 +60,7 @@
         });
 
         request.on('data', function onData(response) {
-            relayedRequest.write(response);
+            relayedRequest.write('ts');
         });
 
         request.on('end', function onEnd() {
