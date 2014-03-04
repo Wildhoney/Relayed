@@ -12,8 +12,8 @@
     var http         = require('http'),
         url          = require('url'),
         childProcess = require('child_process'),
-        args         = require('minimist')(process.argv.slice(2)),
-        colors       = require('colors');
+        args         = require('minimist')(process.argv.slice(2));
+                       require('colors');
 
     /**
      * @property Relayed
