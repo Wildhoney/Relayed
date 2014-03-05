@@ -12,8 +12,9 @@
     var http         = require('http'),
         url          = require('url'),
         childProcess = require('child_process'),
-        args         = require('minimist')(process.argv.slice(2));
-                       require('colors');
+        args         = require('minimist')(process.argv.slice(2)),
+        clc          = require('cli-color'),
+        pad          = require('pad');
 
     /**
      * @property Relayed
@@ -22,8 +23,9 @@
     var Relayed = function Relayed() {
 
         // We're listening!
-        var listening = ' Listening on ' + $host + ' port ' + $port + ' ';
-        console.log(listening.yellow.inverse);
+        this._outputMessage();
+        this._outputMessage('Listening on ' + $host + ' port ' + $port, 97);
+        this._outputMessage();
 
         // Initialise the server to listen for incoming requests.
         http.createServer(this._initialiseServer.bind(this)).listen($port, $host);
@@ -51,6 +53,25 @@
         DEFAULT_PORT: 80,
 
         /**
+         * @method _outputMessage
+         * @param message {String}
+         * @param backgroundColour {Number}
+         * @return {void}
+         * @private
+         */
+        _outputMessage: function _outputMessage(message, backgroundColour) {
+
+            if (!message) {
+                console.log('');
+                return;
+            }
+
+            var msg = clc.xterm(15).bgXterm(backgroundColour);
+            console.log(msg(' ' + pad(message, 100) + ' '));
+
+        },
+
+        /**
          * @method _initialiseServer
          * @param request {Object}
          * @param response {Object}
@@ -58,6 +79,9 @@
          * @private
          */
         _initialiseServer: function _initialiseServer(request, response) {
+
+            // Setup the CORS permissions.
+            this._configureCrossDomain(response);
 
             var targetPort = args.p || this.DEFAULT_PORT,
                 parsedUrl  = url.parse(args.h);
@@ -82,8 +106,10 @@
                 response.writeHead(data.statusCode, data.headers);
 
                 // We've got an incoming request!
-                var incomingRequest = ' ' + data.statusCode + ' - ' + request.url + ' ';
-                console.log(incomingRequest.green.inverse);
+                this._outputMessage('Request', 6);
+                this._outputMessage('Path: ' + request.url, 236);
+                this._outputMessage('Code: ' + data.statusCode, 236);
+                this._outputMessage();
 
                 // When we receive data from the relayed request.
                 data.on('data', function onData(datum) {
@@ -95,7 +121,7 @@
                     response.end();
                 });
 
-            });
+            }.bind(this));
 
             // We just need to write anything to complete the request.
             request.on('data', function onData() {
