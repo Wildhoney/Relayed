@@ -11,8 +11,7 @@
     "url": "https://github.com/Wildhoney/Relayed.git"
   },
   "bin": {
-    "relayed": "./bin/relayed.sh",
-    "relayed-node": "./bin/relayed.js"
+    "relayed": "./bin/relayed.js"
   },
   "keywords": [
     "CORS",
