@@ -84,7 +84,8 @@
             this._configureCrossDomain(response);
 
             var targetPort = args.p || this.DEFAULT_PORT,
-                parsedUrl  = url.parse(args.h);
+                protocol   = (args.s) ? 'https' : 'http',
+                parsedUrl  = url.parse(protocol + '://' + args.h);
 
             var headers  = request.headers;
             headers.host = parsedUrl.host;
@@ -106,7 +107,7 @@
                 response.writeHead(data.statusCode, data.headers);
 
                 // We've got an incoming request!
-                this._outputMessage('Request', 6);
+                this._outputMessage('Request', 97);
                 this._outputMessage('Path: ' + request.url, 236);
                 this._outputMessage('Code: ' + data.statusCode, 236);
                 this._outputMessage();
@@ -148,6 +149,7 @@
             response.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
             response.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
             response.setHeader('Access-Control-Allow-Credentials', true);
+            response.setHeader('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
         },
 
         /**
